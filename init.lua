@@ -1,8 +1,11 @@
 require('plugins')
 
 vim.g.mapleader = ' '         -- Map leader to space
+
 --vim.cmd('colorscheme dracula')     -- Setup colorscheme
 vim.cmd('colorscheme rose-pine')
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 -- ----------------------------------------------------------------------------
 -- gitsigns: https://github.com/lewis6991/gitsigns.nvim
