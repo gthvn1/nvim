@@ -18,6 +18,7 @@ the *init.lua* file
 - [dracula](https://github.com/dracula/vim)
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [glance](https://github.com/DNLHC/glance.nvim)
+- [mason](https://github.com/williamboman/mason.nvim)
 - [nvim-ide](https://github.com/ldelossa/nvim-ide)
 - [rosé](https://github.com/rose-pine/neovim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)

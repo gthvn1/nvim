@@ -11,15 +11,20 @@ vim.opt.relativenumber = true
 -- gitsigns: https://github.com/lewis6991/gitsigns.nvim
 -- ----------------------------------------------------------------------------
 require('gitsigns').setup({
-	-- can add my config here
+    -- can add my config here
 })
 
 -- ----------------------------------------------------------------------------
 -- glance: https://github.com/DNLHC/glance.nvim
 -- ----------------------------------------------------------------------------
 require('glance').setup({
-	-- can add my config here
+    -- can add my config here
 })
+
+-- ----------------------------------------------------------------------------
+-- Mason.nvim: https://github.com/williamboman/mason.nvim
+-- ----------------------------------------------------------------------------
+require("mason").setup()
 
 -- ----------------------------------------------------------------------------
 -- nvim-ide: https://github.com/ldelossa/nvim-ide
@@ -101,4 +106,3 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-
