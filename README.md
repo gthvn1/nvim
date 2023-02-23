@@ -1,6 +1,11 @@
 # My neovim configuration
 
 - Plugins are managed using [Packer](https://github.com/wbthomason/packer.nvim).
+    - To install it:
+```sh
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
 
 ## Hierarchy
 
