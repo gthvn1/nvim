@@ -16,3 +16,10 @@ the *init.lua* file
 - [nvim-ide](https://github.com/ldelossa/nvim-ide)
 - [rosé](https://github.com/rose-pine/neovim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+
+## Cleanup
+
+- If you want to cleanup the installation you need to remove:
+    - **$HOME/.cache/nvim**
+    - **$HOME/.local/share/nvim/**
+- Location can be customized using `XDG_CONFIG_HOME`.
