@@ -15,12 +15,13 @@ the *init.lua* file
 
 ## Plugins
 
-- [dracula](https://github.com/dracula/vim)
-- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
-- [glance](https://github.com/DNLHC/glance.nvim)
-- [mason](https://github.com/williamboman/mason.nvim)
-- [nvim-ide](https://github.com/ldelossa/nvim-ide)
-- [rosé](https://github.com/rose-pine/neovim)
+- [Dracula](https://github.com/dracula/vim)
+- [Fugitive](https://github.com/tpope/vim-fugitive)
+- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [Glance](https://github.com/DNLHC/glance.nvim)
+- [Mason](https://github.com/williamboman/mason.nvim)
+- [Nvim-ide](https://github.com/ldelossa/nvim-ide)
+- [Rosé](https://github.com/rose-pine/neovim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 
 ## Cleanup
