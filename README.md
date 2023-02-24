@@ -30,6 +30,9 @@ the *init.lua* file
 
 - To setup packer and close once all operations are completed you can:
     - `nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'`
+- We modify *plugins.lua* to be a Lua module. It is a common approach in Lua to create
+  a dictionnary *M* for [module](http://lua-users.org/wiki/ModuleDefinition).
+  It is simple, relies on no external code, avoids global and has few pitfalls. 
 
 ## Cleanup
 

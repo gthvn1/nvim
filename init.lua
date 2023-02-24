@@ -1,4 +1,4 @@
-require('plugins')
+require('plugins').setup()
 
 vim.g.mapleader = ' '         -- Map leader to space
 
