@@ -22,6 +22,15 @@ lsp.nvim_workspace()
 lsp.setup()
 
 -- ----------------------------------------------------------------------------
+-- lualine: https://github.com/nvim-lualine/lualine.nvim
+require('lualine').setup {
+    options = {
+        icons_enabled = true,
+        theme = 'dracula',
+    }
+}
+
+-- ----------------------------------------------------------------------------
 -- Mason.nvim: https://github.com/williamboman/mason.nvim
 require("mason").setup()
 

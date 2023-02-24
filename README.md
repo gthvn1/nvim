@@ -21,6 +21,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - [Fugitive](https://github.com/tpope/vim-fugitive)
 - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [Glance](https://github.com/DNLHC/glance.nvim)
+- [lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [lsp-zero](https://github.com/VonHeikemen/lsp-zero.nvim)
 - [Mason](https://github.com/williamboman/mason.nvim)
   - With the installation of *lsp-zero* this plugin is required and installed by *lsp-zero*.

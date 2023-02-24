@@ -2,8 +2,8 @@ local vg = vim.g
 vg.mapleader = ' '         -- Map leader to space
 
 local vc = vim.cmd
---vim.cmd('colorscheme dracula')     -- Setup colorscheme
-vc('colorscheme rose-pine')
+vc('colorscheme dracula')     -- Setup colorscheme
+--vc('colorscheme rose-pine')
 
 local vo = vim.opt
 -- display line number and relative line number

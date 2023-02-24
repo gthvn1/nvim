@@ -11,13 +11,15 @@ function M.setup()
         -- Packer can manage itself
         use { 'wbthomason/packer.nvim' }
 
-        use { 'dnlhc/glance.nvim' }       -- Pretty window for previewing LSP locations in
-                                          -- one place
-        use { 'dracula/vim' }             -- color theme
-        use { 'rose-pine/neovim' }        -- color theme
-        use { 'ldelossa/nvim-ide' }       -- complete IDE for Neovim
-        use { 'lewis6991/gitsigns.nvim'}  -- Better git integration
-        use { 'tpope/vim-fugitive' }      -- call arbitrary Git command
+        use { 'dnlhc/glance.nvim' }        -- Pretty window for previewing LSP locations in
+                                           -- one place
+        use { 'dracula/vim' }              -- color theme
+        use { 'rose-pine/neovim' }         -- color theme
+        use { 'ldelossa/nvim-ide' }        -- complete IDE for Neovim
+        use { 'lewis6991/gitsigns.nvim'}   -- Better git integration
+        use { 'tpope/vim-fugitive' }       -- call arbitrary Git command
+        use { 'nvim-lualine/lualine.nvim', -- Status bar
+              requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
         use { 'nvim-telescope/telescope.nvim',
                tag = '0.1.1',
                requires = { {'nvim-lua/plenary.nvim'} } }
