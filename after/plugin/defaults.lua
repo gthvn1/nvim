@@ -21,6 +21,8 @@ vo.shiftwidth  = 4
 vo.expandtab   = true
 
 vo.termguicolors = true
+vo.colorcolumn   = "80"
+vo.signcolumn    = "yes"
 
 -- When go down always have several lines visible from the bottom unless
 -- you are at the end of the file of course...
