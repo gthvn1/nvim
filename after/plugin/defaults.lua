@@ -20,6 +20,12 @@ vo.softtabstop = 4
 vo.shiftwidth  = 4
 vo.expandtab   = true
 
+vo.termguicolors = true
+
+-- When go down always have several lines visible from the bottom unless
+-- you are at the end of the file of course...
+vo.scrolloff = 5
+
 local vk = vim.keymap
 vk.set('n', '<leader>ff', ':Telescope find_files <cr>'          , {})
 vk.set('n', '<leader>fg', ':Telescope live_grep <cr>'           , {})
