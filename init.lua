@@ -1,41 +1,15 @@
 require('plugins').setup()
 
-vim.g.mapleader = ' '         -- Map leader to space
-
---vim.cmd('colorscheme dracula')     -- Setup colorscheme
-vim.cmd('colorscheme rose-pine')
-
--- display line number and relative line number
-vim.opt.number         = true
-vim.opt.relativenumber = true
-
--- highlight when searching and enable increment search
-vim.opt.hlsearch  = true
-vim.opt.incsearch = true
-
--- Manage tabs as 4 spaces
-vim.opt.tabstop     = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth  = 4
-vim.opt.expandtab   = true
-
 -- ----------------------------------------------------------------------------
 -- gitsigns: https://github.com/lewis6991/gitsigns.nvim
--- ----------------------------------------------------------------------------
-require('gitsigns').setup({
-    -- can add my config here
-})
+require('gitsigns').setup()
 
 -- ----------------------------------------------------------------------------
 -- glance: https://github.com/DNLHC/glance.nvim
--- ----------------------------------------------------------------------------
-require('glance').setup({
-    -- can add my config here
-})
+require('glance').setup()
 
 -- ----------------------------------------------------------------------------
 -- lsp-zero: https://github.com/VonHeikemen/lsp-zero.nvim
--- ----------------------------------------------------------------------------
 local lsp = require('lsp-zero').preset({
   name = 'minimal',
   set_lsp_keymaps = true,
@@ -49,12 +23,10 @@ lsp.setup()
 
 -- ----------------------------------------------------------------------------
 -- Mason.nvim: https://github.com/williamboman/mason.nvim
--- ----------------------------------------------------------------------------
 require("mason").setup()
 
 -- ----------------------------------------------------------------------------
 -- nvim-ide: https://github.com/ldelossa/nvim-ide
--- ----------------------------------------------------------------------------
 -- default components
 local bufferlist      = require('ide.components.bufferlist')
 local explorer        = require('ide.components.explorer')
@@ -102,7 +74,8 @@ require('ide').setup({
     -- panels defined by groups of components, user is free to redefine the defaults
     -- and/or add additional.
     panel_groups = {
-        explorer = { outline.Name, bufferlist.Name, explorer.Name, bookmarks.Name, callhierarchy.Name, terminalbrowser.Name },
+        --explorer = { outline.Name, bufferlist.Name, explorer.Name, bookmarks.Name, callhierarchy.Name, terminalbrowser.Name },
+        explorer = { outline.Name, bufferlist.Name, explorer.Name, callhierarchy.Name },
         terminal = { terminal.Name },
         git = { changes.Name, commits.Name, timeline.Name, branches.Name }
     },
@@ -113,7 +86,7 @@ require('ide').setup({
     },
     -- default panel sizes for the different positions
     panel_sizes = {
-        left = 30,
+        left = 40,
         right = 30,
         bottom = 15
     }
@@ -121,14 +94,8 @@ require('ide').setup({
 
 -- ----------------------------------------------------------------------------
 --  Rosé Pine: https://github.com/rose-pine/neovim
--- ----------------------------------------------------------------------------
 require("rose-pine").setup()
 
 -- ----------------------------------------------------------------------------
 -- Telescope: https://github.com/nvim-telescope/telescope.nvim
--- ----------------------------------------------------------------------------
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+require('telescope').setup()

@@ -11,7 +11,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 - I put the setup in the *init.lua* file.
 - To add a plugin I add it to *lua/plugins.lua*. Setup of plugins is done in
-the *init.lua* file
+  the *init.lua* file
+- Configurations like colorscheme, keymap, soft tabs and Co are done in
+  *after/plugin/defaults*
 
 ## Plugins
 
