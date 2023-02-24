@@ -4,8 +4,20 @@ vim.g.mapleader = ' '         -- Map leader to space
 
 --vim.cmd('colorscheme dracula')     -- Setup colorscheme
 vim.cmd('colorscheme rose-pine')
-vim.opt.number = true
+
+-- display line number and relative line number
+vim.opt.number         = true
 vim.opt.relativenumber = true
+
+-- highlight when searching and enable increment search
+vim.opt.hlsearch  = true
+vim.opt.incsearch = true
+
+-- Manage tabs as 4 spaces
+vim.opt.tabstop     = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth  = 4
+vim.opt.expandtab   = true
 
 -- ----------------------------------------------------------------------------
 -- gitsigns: https://github.com/lewis6991/gitsigns.nvim
