@@ -26,6 +26,11 @@ the *init.lua* file
 - [Rosé](https://github.com/rose-pine/neovim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 
+## Tips
+
+- To setup packer and close once all operations are completed you can:
+    - `nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'`
+
 ## Cleanup
 
 - If you want to cleanup the installation you need to remove:
