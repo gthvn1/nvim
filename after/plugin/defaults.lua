@@ -35,3 +35,8 @@ vk.set('n', '<leader><leader>', ':Telescope buffers <cr>'       , {})
 vk.set('n', '<leader>fh', ':Telescope help_tags <cr>'           , {})
 vk.set('n', '<leader>ls', ':Telescope lsp_document_symbols <cr>', {})
 vk.set('n', '<leader>gs', ':Git grep <cword> <cr>'              , {})
+-- navigate between windows
+vk.set('n', '<C-left>', '<C-w><left>', {})
+vk.set('n', '<C-right>', '<C-w><right>', {})
+vk.set('n', '<C-up>', '<C-w><up>', {})
+vk.set('n', '<C-down>', '<C-w><down>', {})
