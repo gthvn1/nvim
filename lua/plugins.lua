@@ -11,11 +11,14 @@ function M.setup()
         -- Packer can manage itself
         use { 'wbthomason/packer.nvim' }
 
-        use { 'dnlhc/glance.nvim' }        -- Pretty window for previewing LSP locations in
-                                           -- one place
-        use { 'dracula/vim' }              -- color theme
-        use { 'rose-pine/neovim' }         -- color theme
-        use { 'ldelossa/nvim-ide' }        -- complete IDE for Neovim
+        -- Color themes
+        use { 'rmehri01/onenord.nvim' }
+        use { 'dracula/vim' }
+        use { 'rose-pine/neovim' }
+
+        use { 'dnlhc/glance.nvim' } -- Pretty window for previewing
+                                    -- LSP locations in one place
+        use { 'ldelossa/nvim-ide' } -- complete IDE for Neovim
         use { 'lewis6991/gitsigns.nvim'}   -- Better git integration
         use { 'tpope/vim-fugitive' }       -- call arbitrary Git command
         use { 'nvim-lualine/lualine.nvim', -- Status bar
@@ -43,8 +46,7 @@ function M.setup()
                 -- Snippets
                 {'L3MON4D3/LuaSnip'},             -- Required
                 {'rafamadriz/friendly-snippets'}, -- Optional
-              }
-        }
+              } }
     end
 
     local packer = require 'packer'

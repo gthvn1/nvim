@@ -26,6 +26,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 - [Mason](https://github.com/williamboman/mason.nvim)
   - With the installation of *lsp-zero* this plugin is required and installed by *lsp-zero*.
 - [Nvim-ide](https://github.com/ldelossa/nvim-ide)
+- [OneNord](https://github.com/rmehri01/onenord.nvim)
 - [Rosé](https://github.com/rose-pine/neovim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 

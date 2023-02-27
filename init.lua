@@ -26,7 +26,7 @@ lsp.setup()
 require('lualine').setup {
     options = {
         icons_enabled = true,
-        theme = 'dracula',
+        theme = 'onenord',
     }
 }
 
@@ -102,7 +102,15 @@ require('ide').setup({
 })
 
 -- ----------------------------------------------------------------------------
---  Rosé Pine: https://github.com/rose-pine/neovim
+-- Onenord: https://github.com/rmehri01/onenord.nvim
+require('onenord').setup({
+    theme = "light", -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+    borders = true, -- Split window borders
+    fade_nc = true, -- Fade non-current windows, making them more distinguishable
+})
+
+-- ----------------------------------------------------------------------------
+-- Rosé Pine: https://github.com/rose-pine/neovim
 require("rose-pine").setup()
 
 -- ----------------------------------------------------------------------------
