@@ -12,5 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
+vim.wo.relativenumber = true
+
+vim.bo.expandtab = true
+vim.bo.tabstop = 4
 
 require("lazy").setup("plugins")
