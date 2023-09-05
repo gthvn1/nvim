@@ -1,6 +1,7 @@
 return {
     -- colorscheme
     { 'dracula/vim' },
+    { 'rmehri01/onenord.nvim' },
     {
          'rose-pine/neovim',
          lazy = false,
