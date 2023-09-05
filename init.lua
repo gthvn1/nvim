@@ -25,4 +25,8 @@ opt.expandtab = true -- expand tab to spaces
 
 opt.cursorline = true -- highlight cursor line
 
+-- When go down always have several lines visible from the bottom unless
+-- you are at the end of the file of course...
+opt.scrolloff = 5
+
 require("lazy").setup("plugins")
