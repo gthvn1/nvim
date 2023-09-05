@@ -9,13 +9,20 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
-vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
-vim.wo.number = true
-vim.wo.relativenumber = true
 
-vim.bo.expandtab = true
-vim.bo.tabstop = 4
+local opt = vim.opt
+
+opt.rtp:prepend(lazypath)
+
+opt.number = true
+opt.relativenumber = true
+
+opt.tabstop = 4      -- 4 spaces for tabs
+opt.shiftwidth = 4   -- 4 spaces for indent with
+opt.expandtab = true -- expand tab to spaces
+
+opt.cursorline = true -- highlight cursor line
 
 require("lazy").setup("plugins")
