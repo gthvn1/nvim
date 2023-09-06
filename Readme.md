@@ -22,6 +22,7 @@ Here is the list of plugins that I'm using.
 - [Rosé](https://github.com/rose-pine/neovim)
 
 ## Utils
+- [Alpha-nvim](https://github.com/goolord/alpha-nvim)
 - [Dressing](https://github.com/stevearc/dressing.nvim)
 - [Fugitive](https://github.com/tpope/vim-fugitive)
 - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
@@ -31,6 +32,6 @@ Here is the list of plugins that I'm using.
   - [Nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [Vim-illuminate](https://github.com/RRethy/vim-illuminate)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Trouble](https://github.com/folke/trouble.nvim)
+- [Vim-illuminate](https://github.com/RRethy/vim-illuminate)
