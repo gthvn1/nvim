@@ -5,6 +5,10 @@ return {
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
+  keys = {
+      { '<leader>nf', '<Cmd>NvimTreeFindFile<cr>', desc = "NvimTree Find file" },
+      { '<leader>nt', '<Cmd>NvimTreeToggle<cr>', desc = "Toggle NvimTree" };
+  },
   config = function()
     -- disable netrw at the very start of your init.lua
     vim.g.loaded_netrw = 1
@@ -14,8 +18,5 @@ return {
     vim.opt.termguicolors = true
 
     require("nvim-tree").setup {}
-
-    vim.keymap.set('n','<leader>nf', '<Cmd>NvimTreeFindFile<cr>', {silent = true})
-    vim.keymap.set('n','<leader>nt', '<Cmd>NvimTreeToggle<cr>', {silent = true})
   end,
 }

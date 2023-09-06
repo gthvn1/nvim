@@ -4,23 +4,20 @@ return {
                 'nvim-lua/plenary.nvim',
                 'nvim-tree/nvim-web-devicons',
         },
+        keys = {
+            { '<leader><space>', "<cmd>Telescope buffers<cr>", desc = "List open buffers"},
+            { '<leader>ff'     , "<cmd>Telescope find_files<cr>", desc = "Find files" }, 
+            { '<leader>fg'     , "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
+            { '<leader>fs'     , "<cmd>Telescope lsp_document_symbols<cr>", desc = "Document Symbol"},
+            { '<leader>ft'     , "<cmd>Telescope tags<cr>", desc = "tags"},
+        },
         config = function ()
-            local telescope = require('telescope')
-            local builtin = require('telescope.builtin')
-
-            telescope.setup({
+            require('telescope').setup({
                 pickers = {
                     find_files = {
                         theme = "dropdown",
                     },
                 },
             })
-
-            vim.keymap.set('n', '<leader><space>', builtin.buffers, {})
-            vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-            vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-            vim.keymap.set('n', '<leader>fs', builtin.lsp_document_symbols, {})
-            vim.keymap.set('n', '<leader>ft', builtin.tags, {})
-            vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
         end,
 }
