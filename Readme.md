@@ -11,6 +11,7 @@ Here is the list of plugins that I'm using.
 - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [Mason](https://github.com/williamboman/mason.nvim)
+- [Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [OneNord](https://github.com/rmehri01/onenord.nvim)
 - [Rosé](https://github.com/rose-pine/neovim)
