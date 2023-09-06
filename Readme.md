@@ -1,7 +1,10 @@
-# Links
-- [lazy.vim](https://github.com/folke/lazy.nvim)
+# Configuration
+
+Configuration is done using [lazy.vim](https://github.com/folke/lazy.nvim).
 
 # Plugins
+
+Here is the list of plugins that I'm using.
 
 - [Dracula](https://github.com/dracula/vim)
 - [Fugitive](https://github.com/tpope/vim-fugitive)
