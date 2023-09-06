@@ -37,5 +37,26 @@ opt.scrolloff = 5
 -- Make sure to set `mapleader` before lazy so your mappings are correct
 vim.g.mapleader = " "
 
+-- --------------------------------------------------------------------
+-- Keymap
+local km = vim.keymap
+
+km.set("n", "<leader><up>"   , "<C-w><up>"   , { desc = "Go up to window" })
+km.set("n", "<leader><down>" , "<C-w><down>" , { desc = "Go down to window" })
+km.set("n", "<leader><left>" , "<C-w><left>" , { desc = "Go left to window" })
+km.set("n", "<leader><right>", "<C-w><right>", { desc = "Go right to window" })
+
+km.set("n", "<leader>sv", "<C-w>v"        , { desc = "Split window vertically" })
+km.set("n", "<leader>sh", "<C-w>s"        , { desc = "Split window horizontally" })
+km.set("n", "<leader>se", "<C-w>="        , { desc = "Make splits equal size" })
+km.set("n", "<leader>sc", "<cmd>close<CR>", { desc = "Close current split" })
+km.set("n", "<leader>so", "<cmd>only<CR>" , { desc = "Close all split but current" })
+
+km.set("n", "<leader>to", "<cmd>tabnew<CR>"  , { desc = "Open new tab" })
+km.set("n", "<leader>tc", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+km.set("n", "<leader>tn", "<cmd>tabn<CR>"    , { desc = "Go to next tab" })
+km.set("n", "<leader>tp", "<cmd>tabp<CR>"    , { desc = "Go to previous tab" })
+km.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+
 -- Load lazy.vim
 require("lazy").setup("plugins")
