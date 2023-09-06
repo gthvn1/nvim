@@ -1,17 +1,27 @@
 # Configuration
 
-Configuration is done using [lazy.vim](https://github.com/folke/lazy.nvim).
+- Configuration is done using [lazy.vim](https://github.com/folke/lazy.nvim).
+
+- If you need to backup an old config you can do:
+```sh
+mv ~/.config/nvim{,.bak}
+
+# optional but recommended
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+```
 
 # Plugins
 
 Here is the list of plugins that I'm using.
 
-## colorscheme
+## Colors
 - [Dracula](https://github.com/dracula/vim)
 - [OneNord](https://github.com/rmehri01/onenord.nvim)
 - [Rosé](https://github.com/rose-pine/neovim)
 
-## utils
+## Utils
 - [Dressing](https://github.com/stevearc/dressing.nvim)
 - [Fugitive](https://github.com/tpope/vim-fugitive)
 - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
