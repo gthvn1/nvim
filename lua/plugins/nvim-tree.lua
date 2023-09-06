@@ -14,5 +14,8 @@ return {
     vim.opt.termguicolors = true
 
     require("nvim-tree").setup {}
+
+    vim.keymap.set('n','<leader>nf', '<Cmd>NvimTreeFindFile<cr>', {silent = true})
+    vim.keymap.set('n','<leader>nt', '<Cmd>NvimTreeToggle<cr>', {silent = true})
   end,
 }
