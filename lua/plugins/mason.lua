@@ -16,6 +16,7 @@ return {
         -- Setup language servers.
         local lspconfig = require('lspconfig')
         lspconfig.clangd.setup({})
+        lspconfig.ocamllsp.setup({})
         
         -- Global mappings.
         -- See `:help vim.diagnostic.*` for documentation on any of the below
