@@ -30,6 +30,7 @@ Here is the list of plugins that I'm using.
 - [Mason](https://github.com/williamboman/mason.nvim)
   - [Mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
   - [Nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [Navigator](https://github.com/ray-x/navigator.lua)
 - [Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
