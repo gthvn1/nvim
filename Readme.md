@@ -5,8 +5,11 @@
 
 - [Dracula](https://github.com/dracula/vim)
 - [Fugitive](https://github.com/tpope/vim-fugitive)
-- [lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [Mason](https://github.com/williamboman/mason.nvim)
+- [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [OneNord](https://github.com/rmehri01/onenord.nvim)
 - [Rosé](https://github.com/rose-pine/neovim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Trouble](https://github.com/folke/trouble.nvim)
