@@ -26,6 +26,7 @@ Here is the list of plugins that I'm using.
 - [Dressing](https://github.com/stevearc/dressing.nvim)
 - [Fugitive](https://github.com/tpope/vim-fugitive)
 - [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [LazyGit](https://github.com/kdheepak/lazygit.nvim)
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 - [Mason](https://github.com/williamboman/mason.nvim)
   - [Mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
