@@ -11,12 +11,12 @@ return {
         })
         -- After setting up mason-lspconfig you may set up servers via lspconfig
         -- require("lspconfig").lua_ls.setup {}
-        -- require("lspconfig").rust_analyzer.setup {}
         -- ...
         -- Setup language servers.
         local lspconfig = require('lspconfig')
         lspconfig.clangd.setup({})
         lspconfig.ocamllsp.setup({})
+        lspconfig.rust_analyzer.setup({})
         
         -- Global mappings.
         -- See `:help vim.diagnostic.*` for documentation on any of the below
