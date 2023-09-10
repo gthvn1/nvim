@@ -1,15 +1,13 @@
 # Important note:
 
-- Only **NvChad** directory is needed now. We keep others file just to have
-a trace of our previous configuration.
+- I'm using NvChad now. 
 
 # Configuration
 
-- [NvChad](https://nvchad.com/) is using lazy.vim that we already used in
-our previous setup. So it is intresting to use it now. To get the new
-configuration you just need to copy **NvChad/custom**.All others files and
-directories are not used any more. All customization with **NvChad** is done
-into the **custom** dir.
+- I'm using [NvChad](https://nvchad.com/) now. It is using lazy.vim that we
+already used in our previous setup. So it is intresting to use it now. 
+- All custom configuration is done in the **custom/** directory. I forked it
+and adds my custom dir [here](https://github.com/gthvn1/NvChad).
 
 - Some usefull links:
     - [Turn VIM into a full featured IDE with only one command](https://www.youtube.com/watch?v=Mtgo-nP_r8Y&list=PL05iK6gnYad1sb4iQyqsim_Jc_peZdNXf)
