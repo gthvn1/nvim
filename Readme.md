@@ -1,8 +1,4 @@
-# Important note:
-
-- I'm using NvChad now. 
-
-# Configuration
+# Important note
 
 - I'm using [NvChad](https://nvchad.com/) now. It is using lazy.vim that we
 already used in our previous setup. So it is intresting to use it now. 
