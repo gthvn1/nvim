@@ -1,5 +1,4 @@
 local vim = vim
-local Plug = vim.fn['plug#']
 
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -55,6 +54,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
--- Set colorsheme. Need plugins
+-- Set colorsheme. Need plugin tokyonight
 vim.opt.termguicolors = true
 vim.cmd 'colorscheme tokyonight'
