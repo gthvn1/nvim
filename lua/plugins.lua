@@ -12,5 +12,6 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('folke/tokyonight.nvim')
 Plug('williamboman/mason.nvim')
+Plug('neovim/nvim-lspconfig')
 
 vim.call('plug#end')
