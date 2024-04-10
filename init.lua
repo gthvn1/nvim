@@ -21,6 +21,7 @@ require('mason').setup()
 -- LSP
 local lspconfig = require('lspconfig')
 lspconfig.zls.setup {}
+lspconfig.ocamllsp.setup {}
 
 -- Mappings
 -- Telescope
