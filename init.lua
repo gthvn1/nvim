@@ -1,9 +1,14 @@
 local vim = vim
 
+-- When go down always have several lines visible from the bottom unless
+-- you are at the end of the file of course...
+vim.opt.scrolloff = 5
+
+vim.opt.cursorline = true
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.g.mapleader = ' '
 
+vim.g.mapleader = ' '
 
 -- Plugins
 require('plugins')
