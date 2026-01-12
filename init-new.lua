@@ -134,11 +134,13 @@ vim.g.mapleader = " "
 
 local telescope = require("telescope.builtin")
 
-vim.keymap.set("n", "<leader>f", telescope.find_files, { noremap = true, silent = true, desc = "Find files (fuzzy)" })
--- vim.keymap.set("n", "<leader>b", ":b<CR>", { noremap = true })
--- vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true})
--- vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true})
--- vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true})
--- vim.keymap.set("n", "s", vim.lsp.buf.document_symbol, { noremap = true})
+vim.keymap.set("n", "<leader>f", telescope.find_files, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>b", telescope.buffers, { noremap = true })
+vim.keymap.set("n", "<leader>s", telescope.lsp_document_symbols, { noremap = true })
+vim.keymap.set("n", "<leader>/", telescope.live_grep, { noremap = true })
+vim.keymap.set("n", "gd", telescope.lsp_definitions, { noremap = true, silent = true })
+vim.keymap.set("n", "E", telescope.diagnostics, { noremap = true})
 -- vim.keymap.set("n", "E", vim.diagnostic.open_float, { noremap = true})
+-- vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true})
+-- vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true})
 
