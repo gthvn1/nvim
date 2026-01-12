@@ -26,6 +26,7 @@ require("lazy").setup({
 	"hrsh7th/cmp-nvim-lua",
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",
+	"lewis6991/gitsigns.nvim",
 })
 
 
@@ -98,6 +99,8 @@ cmp.setup({
 vim.o.tabstop = 4	-- Use 4 spaces to display tabs, it only affects how tabs are displayed
 -- If we want soft tabs (so tabs as space) we need to use vim.o.expandtab = true
 vim.o.list = true	-- show invisible caracters
+
+vim.opt.signcolumn = "yes:2" -- keep space for signs, LSP diags
 
 vim.o.scrolloff = 5
 
