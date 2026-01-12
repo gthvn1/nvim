@@ -26,10 +26,15 @@ require("lazy").setup({
 	"hrsh7th/cmp-nvim-lua",
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",
+	"ellisonleao/gruvbox.nvim", -- gruvbox theme
 	"lewis6991/gitsigns.nvim", -- Git signs
 	{ -- fuzzy finder
 		"nvim-telescope/telescope.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = { "nvim-lua/plenary.nvim" }
+	},
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" }
 	},
 })
 
@@ -98,8 +103,20 @@ cmp.setup({
 })
 
 -- ===============================
+-- Line setup
+-- ===============================
+require("lualine").setup{
+	options = {
+		theme = "gruvbox",
+	}
+}
+
+-- ===============================
 -- General
 -- ===============================
+
+pcall(vim.cmd("colorscheme gruvbox"))
+
 vim.o.tabstop = 4	-- Use 4 spaces to display tabs, it only affects how tabs are displayed
 -- If we want soft tabs (so tabs as space) we need to use vim.o.expandtab = true
 vim.o.list = true	-- show invisible caracters
