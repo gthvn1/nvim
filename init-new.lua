@@ -20,13 +20,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	"neovim/nvim-lspconfig",
-	"hrsh7th/nvim-cmp",
+	"neovim/nvim-lspconfig",  -- LSP
+	"hrsh7th/nvim-cmp",       -- completions
 	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/cmp-nvim-lua",
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",
-	"lewis6991/gitsigns.nvim",
+	"lewis6991/gitsigns.nvim", -- Git signs
+	{ -- fuzzy finder
+		"nvim-telescope/telescope.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 })
 
 
@@ -111,11 +115,13 @@ vim.o.guifont = "FiraCode Nerd Font:h11"
 -- ===============================
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>f", ":Ex<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>b", ":b<CR>", { noremap = true })
-vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true})
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true})
-vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true})
-vim.keymap.set("n", "s", vim.lsp.buf.document_symbol, { noremap = true})
-vim.keymap.set("n", "E", vim.diagnostic.open_float, { noremap = true})
+local telescope = require("telescope.builtin")
+
+vim.keymap.set("n", "<leader>f", telescope.find_files, { noremap = true, silent = true, desc = "Find files (fuzzy)" })
+-- vim.keymap.set("n", "<leader>b", ":b<CR>", { noremap = true })
+-- vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true})
+-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true})
+-- vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true})
+-- vim.keymap.set("n", "s", vim.lsp.buf.document_symbol, { noremap = true})
+-- vim.keymap.set("n", "E", vim.diagnostic.open_float, { noremap = true})
 
