@@ -125,7 +125,7 @@ vim.opt.signcolumn = "yes:2" -- keep space for signs, LSP diags
 
 vim.o.scrolloff = 5
 
-vim.o.guifont = "FiraCode Nerd Font:h11"
+vim.o.guifont = "CodeNewRoman Nerd Font:h11"
 
 -- ===============================
 -- Keymaps
@@ -139,8 +139,8 @@ vim.keymap.set("n", "<leader>b", telescope.buffers, { noremap = true })
 vim.keymap.set("n", "<leader>s", telescope.lsp_document_symbols, { noremap = true })
 vim.keymap.set("n", "<leader>/", telescope.live_grep, { noremap = true })
 vim.keymap.set("n", "gd", telescope.lsp_definitions, { noremap = true, silent = true })
-vim.keymap.set("n", "E", telescope.diagnostics, { noremap = true})
--- vim.keymap.set("n", "E", vim.diagnostic.open_float, { noremap = true})
+--vim.keymap.set("n", "E", telescope.diagnostics, { noremap = true})
+vim.keymap.set("n", "E", vim.diagnostic.open_float, { noremap = true})
 -- vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true})
 -- vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true})
 
