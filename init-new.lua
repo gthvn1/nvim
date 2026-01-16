@@ -26,6 +26,7 @@ require("lazy").setup({
 	"hrsh7th/cmp-nvim-lua",
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",
+	"SmiteshP/nvim-navic",   -- Display context of the function we are looking
 	"ellisonleao/gruvbox.nvim", -- gruvbox theme
 	"lewis6991/gitsigns.nvim", -- Git signs
 	{ -- fuzzy finder
@@ -44,9 +45,17 @@ require("lazy").setup({
 -- ===============================
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local navic = require("nvim-navic")
+
+local on_attach = function(client, bufnr)
+	if client.server_capabilities.documentSymbolProvider then
+		navic.attach(client, bufnr)
+	end
+end
 
 -- Rust
 vim.lsp.config("rust_analyzer", {
+	on_attach = on_attach,
 	capabilities = capabilities,
 	settings = {
 		["rust-analyzer"] = {},
@@ -56,6 +65,7 @@ vim.lsp.enable("rust_analyzer")
 
 -- OCaml
 vim.lsp.config("ocamllsp", {
+	on_attach = on_attach,
 	capabilities = capabilities,
 	settings = {},
 })
@@ -63,6 +73,7 @@ vim.lsp.enable("ocamllsp")
 
 -- Lua
 vim.lsp.config("lua_ls", {
+	on_attach = on_attach,
 	capabilities = capabilities,
 	settings = {
 		Lua = {
@@ -106,6 +117,21 @@ cmp.setup({
 -- Line setup
 -- ===============================
 require("lualine").setup{
+	sections = {
+		lualine_c = {
+			{
+				"navic",
+				-- Component specific options
+				color_correction = nil, -- Can be nil, "static" or "dynamic". This option is useful only when you have highlights enabled.
+				-- Many colorschemes don't define same backgroud for nvim-navic as their lualine statusline backgroud.
+				-- Setting it to "static" will perform a adjustment once when the component is being setup. This should
+				--   be enough when the lualine section isn't changing colors based on the mode.
+				-- Setting it to "dynamic" will keep updating the highlights according to the current modes colors for
+				--   the current section.
+				navic_opts = nil  -- lua table with same format as setup's option. All options except "lsp" options take effect when set here.
+			}
+		}
+	},
 	options = {
 		theme = "gruvbox",
 	}
