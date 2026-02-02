@@ -28,6 +28,7 @@ require("lazy").setup({
 	"hrsh7th/cmp-path",
 	"SmiteshP/nvim-navic",   -- Display context of the function we are looking
 	"ellisonleao/gruvbox.nvim", -- gruvbox theme
+	"lucasadelino/conifer.nvim", -- minimal theme
 	"lewis6991/gitsigns.nvim", -- Git signs
 	{ -- fuzzy finder
 		"nvim-telescope/telescope.nvim",
