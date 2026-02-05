@@ -5,7 +5,12 @@ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
 	local out = vim.fn.system({
-		"git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"--branch=stable",
+		lazyrepo,
+		lazypath,
 	})
 	if vim.v.shell_error ~= 0 then
 		vim.api.nvim_echo({
@@ -20,27 +25,26 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	"neovim/nvim-lspconfig",  -- LSP
-	"hrsh7th/nvim-cmp",       -- completions
+	"neovim/nvim-lspconfig", -- LSP
+	"hrsh7th/nvim-cmp", -- completions
 	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/cmp-nvim-lua",
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",
-	"SmiteshP/nvim-navic",   -- Display context of the function we are looking
+	"SmiteshP/nvim-navic", -- Display context of the function we are looking
 	"ellisonleao/gruvbox.nvim", -- gruvbox theme
 	"oskarnurm/koda.nvim", -- theme
 	"lucasadelino/conifer.nvim", -- theme
 	"lewis6991/gitsigns.nvim", -- Git signs
 	{ -- fuzzy finder
 		"nvim-telescope/telescope.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" }
+		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" }
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 })
-
 
 -- ===============================
 -- LSP Configuration
@@ -89,14 +93,14 @@ vim.lsp.config("lua_ls", {
 vim.lsp.enable("lua_ls")
 
 -- Python (Ruff)
-vim.lsp.config('ruff', {
-  init_options = {
-    settings = {
-      -- Ruff language server settings go here
-    }
-  }
+vim.lsp.config("ruff", {
+	init_options = {
+		settings = {
+			-- Ruff language server settings go here
+		},
+	},
 })
-vim.lsp.enable('ruff')
+vim.lsp.enable("ruff")
 
 -- ===============================
 -- Completion setup (nvim-cmp)
@@ -110,15 +114,15 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" }, -- LSP completions
 		{ name = "nvim_lua" }, -- Neovim Lua API completions
-		{ name = "buffer" },   -- Words from buffer
-		{ name = "path" },     -- file path
+		{ name = "buffer" }, -- Words from buffer
+		{ name = "path" }, -- file path
 	},
 })
 
 -- ===============================
 -- Line setup
 -- ===============================
-require("lualine").setup{
+require("lualine").setup({
 	sections = {
 		lualine_c = {
 			{
@@ -130,15 +134,15 @@ require("lualine").setup{
 				--   be enough when the lualine section isn't changing colors based on the mode.
 				-- Setting it to "dynamic" will keep updating the highlights according to the current modes colors for
 				--   the current section.
-				navic_opts = nil  -- lua table with same format as setup's option. All options except "lsp" options take effect when set here.
-			}
-		}
+				navic_opts = nil, -- lua table with same format as setup's option. All options except "lsp" options take effect when set here.
+			},
+		},
 	},
 	options = {
 		theme = "auto",
 		transparent = true,
-	}
-}
+	},
+})
 
 -- ===============================
 -- General
@@ -146,9 +150,9 @@ require("lualine").setup{
 
 pcall(vim.cmd("colorscheme conifer-lunar"))
 
-vim.o.tabstop = 4	-- Use 4 spaces to display tabs, it only affects how tabs are displayed
+vim.o.tabstop = 4 -- Use 4 spaces to display tabs, it only affects how tabs are displayed
 -- If we want soft tabs (so tabs as space) we need to use vim.o.expandtab = true
-vim.o.list = true	-- show invisible caracters
+vim.o.list = true -- show invisible caracters
 
 vim.opt.signcolumn = "yes:2" -- keep space for signs, LSP diags
 
@@ -169,7 +173,6 @@ vim.keymap.set("n", "<leader>s", telescope.lsp_document_symbols, { noremap = tru
 vim.keymap.set("n", "<leader>/", telescope.live_grep, { noremap = true })
 vim.keymap.set("n", "gd", telescope.lsp_definitions, { noremap = true, silent = true })
 --vim.keymap.set("n", "E", telescope.diagnostics, { noremap = true})
-vim.keymap.set("n", "E", vim.diagnostic.open_float, { noremap = true})
+vim.keymap.set("n", "E", vim.diagnostic.open_float, { noremap = true })
 -- vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true})
 -- vim.keymap.set("n", "gr", vim.lsp.buf.references, { noremap = true})
-
