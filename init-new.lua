@@ -28,7 +28,8 @@ require("lazy").setup({
 	"hrsh7th/cmp-path",
 	"SmiteshP/nvim-navic",   -- Display context of the function we are looking
 	"ellisonleao/gruvbox.nvim", -- gruvbox theme
-	"lucasadelino/conifer.nvim", -- minimal theme
+	"oskarnurm/koda.nvim", -- theme
+	"lucasadelino/conifer.nvim", -- theme
 	"lewis6991/gitsigns.nvim", -- Git signs
 	{ -- fuzzy finder
 		"nvim-telescope/telescope.nvim",
@@ -134,7 +135,8 @@ require("lualine").setup{
 		}
 	},
 	options = {
-		theme = "gruvbox",
+		theme = "auto",
+		transparent = true,
 	}
 }
 
@@ -142,7 +144,7 @@ require("lualine").setup{
 -- General
 -- ===============================
 
-pcall(vim.cmd("colorscheme gruvbox"))
+pcall(vim.cmd("colorscheme conifer-lunar"))
 
 vim.o.tabstop = 4	-- Use 4 spaces to display tabs, it only affects how tabs are displayed
 -- If we want soft tabs (so tabs as space) we need to use vim.o.expandtab = true
