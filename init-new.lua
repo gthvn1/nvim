@@ -102,6 +102,20 @@ vim.lsp.config("ruff", {
 })
 vim.lsp.enable("ruff")
 
+-- Elixir
+vim.lsp.config("elixirls", {
+	cmd = { "elixir-ls" },
+	init_options = {
+		settings = {
+			elixirLS = {
+				dialyzerEnabled = true, -- enable Dialyzer
+				fetchDeps = false, -- disable auto fetching deps
+			},
+		},
+	},
+})
+vim.lsp.enable("elixirls")
+
 -- ===============================
 -- Completion setup (nvim-cmp)
 -- ===============================
@@ -166,6 +180,9 @@ vim.o.guifont = "CodeNewRoman Nerd Font:h11"
 vim.g.mapleader = " "
 
 local telescope = require("telescope.builtin")
+
+-- Allow to quit terminal mode using ESC
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 
 vim.keymap.set("n", "<leader>f", telescope.find_files, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>b", telescope.buffers, { noremap = true })
