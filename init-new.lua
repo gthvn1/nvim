@@ -44,6 +44,10 @@ require("lazy").setup({
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
+	{
+		"JuliaEditorSupport/julia-vim",
+		lazy = false,
+	},
 })
 
 -- ===============================
@@ -115,6 +119,35 @@ vim.lsp.config("elixirls", {
 	},
 })
 vim.lsp.enable("elixirls")
+
+-- To install julia stuff, in a julia repl do:
+--   using Pkg
+--   Pkg.activate()
+--
+--   Pkg.add("LanguageServer")
+--   Pkg.add("SymbolServer")
+--   Pkg.add("StaticLint")
+--   Pkg.add("JuliaFormatter")
+vim.lsp.config("julials", {
+	capabilities = capabilities,
+	on_attach = function(client, bufnr)
+		if client.server_capabilities.documentSymbolProvider then
+			pcall(function()
+				require("nvim-navic").attach(client, bufnr)
+			end)
+		end
+
+		if client.server_capabilities.documentFormattingProvider then
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				buffer = bufnr,
+				callback = function()
+					vim.lsp.buf.format({ bufnr = bufnr })
+				end,
+			})
+		end
+	end,
+})
+vim.lsp.enable("julials")
 
 -- ===============================
 -- Completion setup (nvim-cmp)
