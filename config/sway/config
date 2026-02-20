@@ -228,12 +228,17 @@ bar {
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
     #status_command while date +'%Y-%m-%d %H:%M'; do sleep 60; done
-	status_command i3status-rs
-
+    status_command i3status-rs
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        background #002b36
+        statusline #839496
+        separator  #586e75
+
+        #               border    bg        text
+        focused_workspace  #268bd2 #073642  #268bd2
+        active_workspace   #586e75 #002b36  #839496
+        inactive_workspace #002b36 #002b36  #586e75
+        urgent_workspace   #dc322f #002b36  #dc322f
     }
 }
 
