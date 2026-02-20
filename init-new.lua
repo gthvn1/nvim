@@ -44,10 +44,6 @@ require("lazy").setup({
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
-	{
-		"JuliaEditorSupport/julia-vim",
-		lazy = false,
-	},
 })
 
 -- ===============================
@@ -62,6 +58,30 @@ local on_attach = function(client, bufnr)
 		navic.attach(client, bufnr)
 	end
 end
+
+-- Go
+vim.lsp.config("gopls", {
+	on_attach = function(client, bufnr)
+		if client.name == "gopls" then
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				buffer = bufnr,
+				callback = function()
+					vim.lsp.buf.format({ async = false })
+				end,
+			})
+		end
+	end,
+	capabilities = capabilities,
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+	},
+})
+vim.lsp.enable("gopls")
 
 -- Rust
 vim.lsp.config("rust_analyzer", {
@@ -98,6 +118,8 @@ vim.lsp.enable("lua_ls")
 
 -- Python (Ruff)
 vim.lsp.config("ruff", {
+	on_attach = on_attach,
+	capabilities = capabilities,
 	init_options = {
 		settings = {
 			-- Ruff language server settings go here
@@ -108,6 +130,8 @@ vim.lsp.enable("ruff")
 
 -- Elixir
 vim.lsp.config("elixirls", {
+	on_attach = on_attach,
+	capabilities = capabilities,
 	cmd = { "elixir-ls" },
 	init_options = {
 		settings = {
