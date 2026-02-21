@@ -8,9 +8,6 @@ idle_fg = "#abcdef"
 
 [icons]
 icons = "awesome4"
-[icons.overrides]
-bat = ["|E|", "|_|", "|=|", "|F|"]
-bat_charging = "|^| "
 
 [[block]]
 block = "cpu"
@@ -38,6 +35,11 @@ block = "sound"
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"
+
+[[block]]
+block = "battery"
+device = "BAT0"
+interval = 60
 
 [[block]]
 block = "time"
