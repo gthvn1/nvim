@@ -149,11 +149,7 @@ vim.lsp.enable("lua_ls")
 vim.lsp.config("ruff", {
     capabilities = capabilities,
     on_attach = base_on_attach,
-    init_options = {
-        settings = {
-            -- Ruff language server settings go here
-        },
-    },
+    root_dir = vim.fn.getcwd(),
 })
 vim.lsp.enable("ruff")
 
@@ -173,6 +169,27 @@ vim.lsp.config("elixirls", {
 })
 vim.lsp.enable("elixirls")
 
+-- Zig
+vim.lsp.config("zls", {
+    capabilities = capabilities,
+    on_attach = function(client, bufnr)
+        base_on_attach(client, bufnr)
+        enable_format_on_save(client, bufnr)
+    end,
+    cmd = { "zls" },
+    filetypes = { "zig", "zir" },
+    root_markers = { "zls.json", "build.zig", ".git" },
+
+    settings = {
+        zls = {
+            enable_inlay_hints = true,
+            enable_snippets = false,
+            warn_style = true,
+        },
+    },
+})
+
+vim.lsp.enable("zls")
 -- ===============================
 -- Completion setup (nvim-cmp)
 -- ===============================
@@ -315,17 +332,19 @@ require("lualine").setup({
 -- General
 -- ===============================
 
-pcall(vim.cmd("colorscheme conifer-lunar"))
+pcall(vim.cmd("colorscheme gruvbox"))
 
-vim.o.tabstop = 4 -- Use 4 spaces to display tabs, it only affects how tabs are displayed
+vim.opt.number = true
+
+vim.opt.tabstop = 4 -- Use 4 spaces to display tabs, it only affects how tabs are displayed
 -- If we want soft tabs (so tabs as space) we need to use vim.o.expandtab = true
-vim.o.list = true -- show invisible caracters
+vim.opt.list = true -- show invisible caracters
 
 vim.opt.signcolumn = "yes:2" -- keep space for signs, LSP diags
 
-vim.o.scrolloff = 5
+vim.opt.scrolloff = 5
 
-vim.o.guifont = "CodeNewRoman Nerd Font:h11"
+vim.opt.guifont = "CodeNewRoman Nerd Font:h11"
 
 -- ===============================
 -- Keymaps
