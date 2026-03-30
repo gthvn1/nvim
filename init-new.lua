@@ -36,6 +36,7 @@ require("lazy").setup({
     "oskarnurm/koda.nvim", -- theme
     "lucasadelino/conifer.nvim", -- theme
     "lewis6991/gitsigns.nvim", -- Git signs
+    "elixir-editors/vim-elixir", -- Elixir syntax highlight plugin
     "kdheepak/JuliaFormatter.vim",
     "Vigemus/iron.nvim", -- repl
     { -- fuzzy finder
@@ -46,13 +47,6 @@ require("lazy").setup({
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "elixir" },
-    callback = function()
-        vim.treesitter.start()
-    end,
 })
 
 -- ===============================
@@ -157,7 +151,7 @@ vim.lsp.enable("ruff")
 vim.lsp.config("elixirls", {
     capabilities = capabilities,
     on_attach = base_on_attach,
-    cmd = { "elixir-ls" },
+    cmd = { "/home/gthvn1/opt/elixir-ls/language_server.sh" },
     init_options = {
         settings = {
             elixirLS = {
