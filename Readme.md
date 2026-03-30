@@ -12,6 +12,8 @@ mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 ```
 
+- format: `stylua --indent-type Spaces --indent-width 4 --column-width 100 init-new.lua`
+
 # Plugins
 
 Here is the list of plugins that I'm using.
