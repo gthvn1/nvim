@@ -47,6 +47,13 @@ require("lazy").setup({
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        opts = {
+            ensure_installed = { "lua" },
+        },
+    },
 })
 
 -- ===============================
@@ -151,7 +158,7 @@ vim.lsp.enable("ruff")
 vim.lsp.config("elixirls", {
     capabilities = capabilities,
     on_attach = base_on_attach,
-    cmd = { "/home/gthvn1/opt/elixir-ls/language_server.sh" },
+    cmd = { "/home/gthvn1/git/elixir-ls/scripts/language_server.sh" },
     init_options = {
         settings = {
             elixirLS = {
